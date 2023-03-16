@@ -1,0 +1,242 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+body{
+
+    height: 100vh;
+    background-size: cover;
+    background-image:url("svg/Wave.svg");
+}
+.h1{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    display: inline-block;
+    text-align: center;
+    text-transform:uppercase;
+    margin-top: 10px;
+    font-size: 45px;
+    color: aliceblue;
+    background-color: rgb(62, 90, 182);
+    padding: 5px 15px 5px 15px;
+    border-radius: 30px;
+}
+
+.calculator-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+#calculadora-grid{
+    width: 500px;
+    display: grid;
+    grid-template-areas:'line1 line1 line1 line1'
+    'line2 line2 line2 line2'
+    'line3 line3 line3 line3'
+    'line4 line4 line4 line4'
+    'line5 line5 line5 line5'
+    'line6-1 line6-1 line6-2 line6-2';
+    row-gap: 10px;
+    column-gap: 5px;
+    justify-items: center;
+    background-color: rgb(26, 52, 73);
+    padding: 20px;
+    border-radius: 30px;
+
+}
+
+.line1{
+    grid-area: line1;
+ width: 100%;
+ display: flex;
+}
+
+.line6-1{
+    grid-area: line6-1;
+    width:220px !important ;
+    border-radius: 100px;
+}
+
+::placeholder{
+    font-size: 30px;
+}
+
+
+
+#answer{
+    width: 100%;
+    border-radius: 30px;
+    height: 50px;
+    font-weight:500;
+    font-size: 30px;
+    border: 1px solid rgb(151, 151, 151);
+    padding: 5px 20px 5px 20px;
+}
+
+button{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: rgb(90, 90, 90);
+    color: aliceblue;
+    border: none;
+    font-weight:500;
+    font-size: 30px;
+}
+
+button:active{
+    background-color: rgb(172, 168, 168);
+
+}
+
+.operator{
+    background-color: rgb(231, 153, 49);
+    font-size: 40px;
+}
+
+.operator:active{
+    background-color: rgb(243, 184, 106);
+    
+}
+
+.operator2{
+    background-color: rgb(151, 151, 151);
+    font-size: 30px;
+}
+
+
+
+
+/* desktop small */
+@media screen  and (min-width: 768px) and (max-width: 1400px){
+    h1{
+        font-size: 35px;
+        padding: 5px 15px 5px 15px;
+    }
+
+    #calculadora-grid{
+        display: grid;
+        width: 350px;
+        row-gap: 10px;
+        column-gap: 5px;
+        padding: 20px;
+    }
+
+    #answer{
+        max-width: 100%;
+        height: 45px;
+        font-size: 30px;
+        padding: 5px 20px 5px 20px;
+    }
+    
+    button{
+        width: 80px;
+        height: 80px;
+        font-size: 30px;
+    }
+    .line6-1{
+        width:170px !important ;
+    }
+    .operator{
+        font-size: 40px;
+    }
+    
+    .operator2{
+        font-size: 30px;
+    }
+}
+
+
+
+/* tablet en vertical */
+@media screen and (min-width:480px) and (max-width:767px){
+    h1{
+        font-size: 30px;
+        padding: 5px 15px 5px 15px;
+    }
+    .calculator-container{
+        margin-top: 15px;
+    
+    }
+    #calculadora-grid{
+        width: 300px;
+        row-gap: 10px;
+        column-gap: 5px;
+        padding: 15px;
+    }
+
+    #answer{
+        height: 35px;
+        font-size: 25px;
+        padding: 5px 20px 5px 20px;
+    }
+    
+    button{
+        width: 70px;
+        height: 70px;
+        font-size: 25px;
+    }
+    .line6-1{
+        width:140px !important ;
+    }
+    .operator{
+        font-size: 30px;
+    }
+    
+    .operator2{
+        font-size: 25px;
+    }
+}
+
+
+/* mobile */
+@media screen and (min-width:320px) and (max-width:479px){
+    h1{
+        font-size: 25px;
+        padding: 5px 15px 5px 15px;
+    }
+    .calculator-container{
+        margin-top: 15px;
+    }
+
+    #calculadora-grid{
+        display: grid;
+        width: 250px;
+        padding: 15px;
+        border-radius: 30px;
+    }
+
+    #answer{
+        height: 30px;
+        font-size: 25px;
+    }
+    
+    ::placeholder{
+        font-size: 25px;
+    }
+
+    button{
+        width: 57.5px;
+        height: 57.5px;
+        font-size: 20px;
+    }
+    .line6-1{
+        width:120px !important ;
+    }
+    .operator{
+        font-size: 30px;
+    }
+    
+    .operator2{
+        font-size: 20px;
+    }
+
+}
