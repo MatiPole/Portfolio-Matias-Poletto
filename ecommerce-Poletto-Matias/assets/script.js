@@ -263,7 +263,7 @@ const catalogo =(catalogoCompleto) =>{
         tituloVideojuegos.textContent= videojuego.nombre
         precioVideojuego.textContent= '$'+videojuego.precio
         precioVideojuego.setAttribute("class", "precio")
-        botonAgregar.textContent= "Comprar"
+        botonAgregar.textContent= "Agregar"
         botonAgregar.setAttribute("data-set", videojuego.id)
         botonAgregar.addEventListener('click', function(){agregarAlCarrito(videojuego.id)}); 
         botonDetalle.textContent= "Ver más"
